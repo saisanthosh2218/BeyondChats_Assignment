@@ -23,7 +23,7 @@ const SetupOrganisation = () => {
     setLoading(true); // Show loader
     try {
       const response = await axios.post(
-        "https://beyondchats-assignment-759z.onrender.com/api/company/register",
+        "https://beyondchats-assignment-7dzn.onrender.com/api/company/register",
         company
       );
       setSubmittedCompany(response.data.company);
@@ -38,7 +38,7 @@ const SetupOrganisation = () => {
   const fetchPageData = async (companyId) => {
     try {
       const response = await axios.get(
-        `https://beyondchats-assignment-759z.onrender.com/api/company/${companyId}/pages`
+        `https://beyondchats-assignment-7dzn.onrender.com/api/company/${companyId}/pages`
       );
       setPages(response.data);
     } catch (error) {
@@ -52,7 +52,7 @@ const SetupOrganisation = () => {
     let interval = setInterval(async () => {
       try {
         const response = await axios.get(
-          `https://beyondchats-assignment-759z.onrender.com/api/company/${submittedCompany._id}/training-status`
+          `https://beyondchats-assignment-7dzn.onrender.com/api/company/${submittedCompany._id}/training-status`
         );
         setTrainingProgress(response.data.progress);
         if (response.data.progress >= 100) {

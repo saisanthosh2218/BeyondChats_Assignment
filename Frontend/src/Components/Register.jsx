@@ -40,7 +40,7 @@ const Register = () => {
   const handleGoogleResponse = async (response) => {
     try {
       const res = await axios.post(
-        "https://beyondchats-assignment-759z.onrender.com/api/auth/google",
+        "https://beyondchats-assignment-7dzn.onrender.com/api/auth/google",
         {
           token: response.credential,
         }
@@ -54,7 +54,7 @@ const Register = () => {
   const handleRegister = async () => {
     try {
       const res = await axios.post(
-        "https://beyondchats-assignment-759z.onrender.com/api/auth/register",
+        "https://beyondchats-assignment-7dzn.onrender.com/api/auth/register",
         form
       );
       toast.success(res.data.message);
@@ -67,7 +67,7 @@ const Register = () => {
   const handleVerify = async () => {
     try {
       const res = await axios.post(
-        "https://beyondchats-assignment-759z.onrender.com/api/auth/verify-email",
+        "https://beyondchats-assignment-7dzn.onrender.com/api/auth/verify-email",
         {
           email: form.email,
           code: verificationCode,
